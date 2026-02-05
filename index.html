@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie night 🎥</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { box-sizing: border-box; font-family: 'Quicksand', sans-serif; }
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #ffd6e7;
+    }
+    .card {
+      background: white;
+      width: 90%;
+      max-width: 500px;
+      height: 550px; /* Increased height for comfort */
+      border-radius: 24px;
+      padding: 24px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    h1 { margin-top: 10px; font-size: 1.8rem; color: #ff5c8a; }
+    #subtitle { margin-top: 10px; font-size: 1.2rem; color: #ff7aa2; min-height: 1.5em; }
+    .bears { display: flex; justify-content: center; gap: 10px; margin: 20px 0; }
+    .bears img { width: 80px; height: 80px; border-radius: 12px; object-fit: cover; }
+    
+    .buttons {
+      margin-top: 30px;
+      position: relative;
+      height: 250px; /* Give the buttons room to "run" */
+    }
+    button {
+      border: none;
+      border-radius: 999px;
+      padding: 14px 28px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: transform 0.2s ease, background-color 0.3s ease;
+      position: absolute;
+    }
+    #yesBtn {
+      background-color: #ff5c8a;
+      color: white;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0; /* Starting position */
+      z-index: 10;
+    }
+    #noBtn {
+      background-color: #f2f2f2;
+      color: #444;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 70px; /* Starting position below Yes */
+      width: 110px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div id="content">
+        <h1>Movie night this Weekend? 🥺</h1>
+        <div id="subtitle">Click to find out...</div>
+
+        <div class="bears">
+          <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3Y0Z2Q0cGVyZjB1OWM0cDhiN2VhNDJycXd4MGh2M3l1Z2Z3cWNsZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/IvoysZG4Zn5a4cWBZA/giphy.gif" alt="Solo" />
+          <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcXhmdGhrcTlqbTVnOWszemxvbDFnbzhuamYzMDVkdXhoNmV5M3dqbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/901mxGLGQN2PyCQpoc/giphy.gif" alt="Cat" />
+          <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDJkZ3l2ajQ0dWt1NGdxODNsdHg2NjNkM3ptemk3NTl3aGI3Zm41MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/10S42gVFmZJ4eA/giphy.gif" alt="Hero" />
+        </div>
+
+        <div class="buttons" id="buttonArea">
+          <button id="yesBtn">Yes 😜</button>
+          <button id="noBtn">No 🙄</button>
+        </div>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const yesBtn = document.getElementById('yesBtn');
+    const subtitle = document.getElementById('subtitle');
+    const area = document.getElementById('buttonArea');
+    const card = document.querySelector('.card');
+
+    const messages = [
+      'Are you sure? 😟',
+      'Pookie please 🧸',
+      'Whats wrong with you 😭',
+      'Bus bhi karo ab nakhray 😫',
+      'Maan jao na 🥹',
+      'You think this is gonna end? 😁',
+      'Do you even have a heart? 😞',
+      'I hate you 😡',
+      'Haha I was just kidding 😅',
+      'Okay now you are pushing it 😒',
+      'You are breaking my heart...'
+    ];
+
+    let messageIndex = 0;
+    let yesScale = 1;
+
+    noBtn.addEventListener('click', () => {
+      // 1. Update Message
+      subtitle.textContent = messages[messageIndex];
+      messageIndex = (messageIndex + 1) % messages.length;
+
+      // 2. Move No Button (constrained to the buttonArea)
+      const maxX = area.clientWidth - noBtn.offsetWidth;
+      const maxY = area.clientHeight - noBtn.offsetHeight;
+
+      const randomX = Math.floor(Math.random() * maxX);
+      const randomY = Math.floor(Math.random() * maxY);
+
+      noBtn.style.left = randomX + 'px';
+      noBtn.style.top = randomY + 'px';
+      noBtn.style.transform = 'none'; // Remove the initial centering transform
+    });
+
+    yesBtn.addEventListener('click', () => {
+      document.getElementById('content').innerHTML = `
+        <h1 style="margin-top:50px;">YAYYY 🥳🥳🥳🥳🥳</h1>
+        <p style="font-size:1.5rem; color:#ff5c8a;">Best decision ever! 🤩🤩🤩</p>
+        <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbWp6dDJnNGpkN25haHRqZmJldGlkejg0dDkwbW01c2F2Y2U0bDVlMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/l7wnM8ZJ9evqSPaWHk/giphy.gif" 
+             style="width:250px; border-radius:16px; margin-top:20px;" />
+      `;
+    });
+  </script>
+</body>
+</html>
