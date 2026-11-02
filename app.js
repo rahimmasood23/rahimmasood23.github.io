@@ -30,7 +30,10 @@ function moveNo() {
   no.style.top = `${next.y}px`;
 }
 no.addEventListener('click', () => {
-  response.textContent = content.noResponse;
+  const captions = content.noResponses;
+
+  response.textContent = captions[moves % captions.length];
+
   moves += 1;
   moveNo();
 });
