@@ -9,6 +9,11 @@ window.SANU_CONTENT = {
   flowersMessage: 'Hey Sana, I bet you didnot see this coming. Yes yes, I know you take me a little for granted these days, but donot worry, I will not stop surprising you 😈 Words cannot be put in how much I missed you...This is the first time I have felt so distant to you...The flowers on the bedside yesterday was not a gift from me, they were just a depiction of what you bring in my life. Sana, you bring all the freshness and colors in my life, but then why white roses? The white symbolizes the peace and sukoon you brought...Sana, Thankyou for your existence in my life...',
   signature: 'From your Hulky',
   question: 'Can we go chai today?',
-  noResponse: 'Yar dekhlo?',
+  noResponses: [
+  'Oh aisa hai?',
+  '[Your second caption]',
+  '[Your third caption]',
+  '[Your fourth caption]'
+],
   yesResponse: 'YAYYYY See you at 9:45ish today!!'
 };
