@@ -19,7 +19,7 @@ window.SANU_CONTENT = {
   'Arayyy buss aur cool captions nhi likhay',
   'Jk jk likhay hain',
   'You know you are being really hurtful right now..',
-  'I really missed you..',
+  'I really missed you..'
 ],
   yesResponse: 'YAYYYY See you at chai today!!'
 };
