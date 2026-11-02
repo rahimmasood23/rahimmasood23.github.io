@@ -4,11 +4,11 @@ window.SANU_CONTENT = {
   pageTitle: 'Sana · Welcome back',
   name: 'Sanu',
   headline: 'Welcome back, Sana.',
-  message: '[Your short message about how much you missed her]',
+  message: 'This has been a long weekend, missed you cutoo..',
   flowersTitle: 'A little welcome-home surprise',
-  flowersMessage: '[Your note about the flowers waiting on your bedroom dressing table]',
-  signature: '[Your sign-off]',
+  flowersMessage: 'Hey Sana, I bet you didnot see this coming. Yes yes, I know you take me a little for granted these days, but donot worry, I will not stop surprising you 😈 Words cannot be put in how much I missed you...This is the first time I have felt so distant to you...The flowers on the bedside yesterday was not a gift from me, they were just a depiction of what you bring in my life. Sana, you bring all the freshness and colors in my life, but then why white roses? The white symbolizes the peace and sukoon you brought...Sana, Thankyou for your existence in my life...',
+  signature: 'From your Hulky',
   question: 'Can we go chai today?',
-  noResponse: 'Oh aisa hai?',
-  yesResponse: '[Your happy response to her Yes]'
+  noResponse: 'Yar dekhlo?',
+  yesResponse: 'YAYYYY See you at 9:45ish today!!'
 };
