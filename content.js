@@ -10,10 +10,16 @@ window.SANU_CONTENT = {
   signature: 'From your Hulky',
   question: 'Can we go chai today?',
   noResponses: [
-  'Oh aisa hai?',
-  '[Your second caption]',
-  '[Your third caption]',
-  '[Your fourth caption]'
+  'Oh wow you actually said no?',
+  'After all this time torturing me you again picked No?',
+  'Oh han oopsies, mein thori aap k favs mein tha',
+  'Acha na chalo dramay kam karoo ab',
+  'Maan bhi jao na',
+  'Acha chai meri taraf se',
+  'Arayyy buss aur cool captions nhi likhay',
+  'Jk jk likhay hain',
+  'You know you are being really hurtful right now..',
+  'I really missed you..',
 ],
-  yesResponse: 'YAYYYY See you at 9:45ish today!!'
+  yesResponse: 'YAYYYY See you at chai today!!'
 };
